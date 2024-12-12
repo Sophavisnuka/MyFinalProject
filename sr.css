@@ -109,7 +109,7 @@ header ul li:hover .dropDown ul li a:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: url("/Image/angkorThomBg.jpg");
+    background-image: url("../Image/angkorThomBg.jpg");
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -153,7 +153,7 @@ header ul li:hover .dropDown ul li a:hover {
     
         .image1 {
             border-radius: 10px;
-            background-image: url("/Image/Ta-Prohm-1.jpg");
+            background-image: url("../Image/Ta-Prohm-1.jpg");
             background-color: white;
             background-size: cover;
             background-position: center;    
@@ -161,21 +161,21 @@ header ul li:hover .dropDown ul li a:hover {
         .image2 {
             border-radius: 10px;
             background-color: rgb(255, 153, 153);
-            background-image: url("/Image/pub-street.jpg");
+            background-image: url("../Image/pub-street.jpg");
             background-size: cover;
             background-position: center;    
         }
         .image3 {
             border-radius: 10px;
             background-color: rgb(79, 252, 255);
-            background-image: url("/Image/sunsetBakheng.jpg");
+            background-image: url("../Image/sunsetBakheng.jpg");
             background-size: cover;
             background-position: center;    
         }
         .image4 {
             border-radius: 10px;
             background-color: rgb(54, 118, 255);
-            background-image: url("/Image/Srah-Srang.png");
+            background-image: url("../Image/Srah-Srang.png");
             background-size: cover;
             background-position: center;    
         }
@@ -184,7 +184,7 @@ header ul li:hover .dropDown ul li a:hover {
             grid-column: span 2;    
             border-radius: 10px;
             background-color: rgb(0, 208, 142);
-            background-image: url("/Image/angkorMuseum.jpg");
+            background-image: url("../Image/angkorMuseum.jpg");
             background-size: cover;
             background-position: center;    
         }.image6 {
@@ -275,7 +275,7 @@ header ul li:hover .dropDown ul li a:hover {
             height: 500px;
             padding: 30px;
             background-color: white;
-            background-image: url("/Image/IMG20241130072421.jpg");
+            background-image: url("../Image/IMG20241130072421.jpg");
             background-size: cover;
             background-position: center;
         }
@@ -284,7 +284,7 @@ header ul li:hover .dropDown ul li a:hover {
             height: 500px;
             padding: 30px;
             background-color: white;
-            background-image: url("/Image/IMG20241130113446.jpg");
+            background-image: url("../Image/IMG20241130113446.jpg");
             background-size: cover;
             background-position: center;
         }
@@ -293,7 +293,7 @@ header ul li:hover .dropDown ul li a:hover {
             height: 500px;
             padding: 30px;
             background-color: white;
-            background-image: url("/Image/IMG20241201112705.jpg");
+            background-image: url("../Image/IMG20241201112705.jpg");
             background-size: cover;
             background-position: center;
         }
@@ -302,7 +302,7 @@ header ul li:hover .dropDown ul li a:hover {
             height: 500px;
             padding: 30px;
             background-color: white;
-            background-image: url("/Image/IMG20241201203839.jpg");
+            background-image: url("../Image/IMG20241201203839.jpg");
             background-size: cover;
             background-position: center;
         }
@@ -311,7 +311,7 @@ header ul li:hover .dropDown ul li a:hover {
             height: 500px;
             padding: 30px;
             background-color: white;
-            background-image: url("/Image/Preah-Dark-Village.png");
+            background-image: url("../Image/Preah-Dark-Village.png");
             background-size: cover;
             background-position: center;
         }
