@@ -109,7 +109,7 @@ header ul li:hover .dropDown ul li a:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: url("../Image/angkorThomBg.jpg");
+    background-image: url("./Image/angkorThomBg.jpg");
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -153,7 +153,7 @@ header ul li:hover .dropDown ul li a:hover {
     
         .image1 {
             border-radius: 10px;
-            background-image: url("../Image/Ta-Prohm-1.jpg");
+            background-image: url("./Image/Ta-Prohm-1.jpg");
             background-color: white;
             background-size: cover;
             background-position: center;    
@@ -161,14 +161,14 @@ header ul li:hover .dropDown ul li a:hover {
         .image2 {
             border-radius: 10px;
             background-color: rgb(255, 153, 153);
-            background-image: url("../Image/pub-street.jpg");
+            background-image: url("./Image/pub-street.jpg");
             background-size: cover;
             background-position: center;    
         }
         .image3 {
             border-radius: 10px;
             background-color: rgb(79, 252, 255);
-            background-image: url("../Image/sunsetBakheng.jpg");
+            background-image: url("./Image/sunsetBakheng.jpg");
             background-size: cover;
             background-position: center;    
         }
@@ -184,7 +184,7 @@ header ul li:hover .dropDown ul li a:hover {
             grid-column: span 2;    
             border-radius: 10px;
             background-color: rgb(0, 208, 142);
-            background-image: url("../Image/angkorMuseum.jpg");
+            background-image: url("./Image/angkorMuseum.jpg");
             background-size: cover;
             background-position: center;    
         }.image6 {
@@ -237,28 +237,34 @@ header ul li:hover .dropDown ul li a:hover {
         .place3 {
             text-align: end;
         }
-        .button {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            button {
-                border-style: none;
-                width: 20%;
-                border-radius: 10px;
-                font-size: 20px;
-                font-weight: bold;
-                padding: 15px;
-                transition: 0.3s;
-                background-color: #00AA44;
-            }
-            button:hover {
-                background-color: #00ff66;
-                transform: scale(1.05);
-            }
-        }
+        
     }
 }
+.button, .button2 {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+        a {
+            list-style: none;
+            text-decoration: none;
+            border-style: none;
+            width: 25%;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 15px;
+            transition: 0.3s;
+            color: black;
+            background-color: #00AA44;
+    }
+    a:hover {
+        background-color: #00ff66;
+        transform: scale(1.05);
+    }
+}
 .wrapper {
     padding: 20px 150px;
 
@@ -275,7 +281,7 @@ header ul li:hover .dropDown ul li a:hover {
             height: 500px;
             padding: 30px;
             background-color: white;
-            background-image: url("../Image/IMG20241130072421.jpg");
+            background-image: url("./Image/IMG20241130072421.jpg");
             background-size: cover;
             background-position: center;
         }
@@ -284,7 +290,7 @@ header ul li:hover .dropDown ul li a:hover {
             height: 500px;
             padding: 30px;
             background-color: white;
-            background-image: url("../Image/IMG20241130113446.jpg");
+            background-image: url("./Image/IMG20241130113446.jpg");
             background-size: cover;
             background-position: center;
         }
@@ -293,7 +299,7 @@ header ul li:hover .dropDown ul li a:hover {
             height: 500px;
             padding: 30px;
             background-color: white;
-            background-image: url("../Image/IMG20241201112705.jpg");
+            background-image: url("./Image/IMG20241201112705.jpg");
             background-size: cover;
             background-position: center;
         }
@@ -302,7 +308,7 @@ header ul li:hover .dropDown ul li a:hover {
             height: 500px;
             padding: 30px;
             background-color: white;
-            background-image: url("../Image/IMG20241201203839.jpg");
+            background-image: url("./Image/IMG20241201203839.jpg");
             background-size: cover;
             background-position: center;
         }
@@ -311,7 +317,7 @@ header ul li:hover .dropDown ul li a:hover {
             height: 500px;
             padding: 30px;
             background-color: white;
-            background-image: url("../Image/Preah-Dark-Village.png");
+            background-image: url("./Image/Preah-Dark-Village.png");
             background-size: cover;
             background-position: center;
         }
@@ -384,9 +390,11 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center; 
-    height: 60vh;
+    height: 70vh;
     color: white;
-
+    background: 
+    linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    cursor: pointer;
     #exploreFooter {
         margin-top: 20px;
         text-align: center;
@@ -407,22 +415,41 @@ footer {
         gap: 50px; 
         width: 100%;
     }
-    .socialMedia {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 100;
-        width: 140px;
-        gap: 20px;
+    .ourSocial {
+        text-align: center;
+        transition: 0.3s;
+        .socialMedia {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            width: 140px;
+            gap: 20px;
+        }
     }
-    svg{
+    svg, .copyright,  .customerService a {
         fill: white;
-    }
-    .customerService, .copyright {
-        gap: 20px;
         color: white;
+        transition: 0.3s;
+        list-style: none;
+        text-decoration: none;
     }
-    
+    #a, #b, #c, #d {
+        transition: 0.3s;
+    }
+    .ourSocial:hover {
+        color: #92ffbe;
+    }
+    #a:hover, #b:hover, #c:hover, #d:hover {
+        transform: scale(1.3);
+        fill: #3eff8b;
+    }
+    .copyright.copyright:hover, .customerService:hover{
+        color: #92ffbe;
+    }
+    a:hover{
+        color: #92ffbe;
+    }
 }
 
 @media (max-width: 838px) {
