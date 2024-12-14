@@ -110,7 +110,7 @@ header ul li:hover .dropDown ul li a:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)),url("../Image/bgIMG2.jpg");
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)),url("./Image/bgIMG2.jpg");
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -122,8 +122,10 @@ header ul li:hover .dropDown ul li a:hover {
     color: white;
 }
 #midText, h1 {
+    text-align: center;
     font-size: 50px;
     font-weight: bold;
+    background-attachment: fixed;
 }
 .container {
     height: 100vh;
@@ -152,56 +154,67 @@ header ul li:hover .dropDown ul li a:hover {
         margin-top: 100px;
     }
     .explore {
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6)),url("../Image/angkor-thom-causeway.jpg");
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6)),url("./Image/angkor-thom-causeway.jpg");
         padding: 20px 150px;
         width: 100%;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-    }
-    .mainPlace {
-        /* position: relative; */
-        text-align: center;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        margin-top: 50px;
-        gap: 20px;
-        #pic1, #pic3 {
-            width: 25vw;
-        }
-        #pic2 {
-            width: 20.8vw;
-        }
-        .pic1, .pic2, .pic3 {
-            position: relative;
-            transition: 0.3s;
-        }
-        .pic1:hover,  .pic2:hover, .pic3:hover{
-            padding: 10px;
-            transform: scale(1.1);
-        }
-        .text1 a, .text2 a, .text3 a {
-            text-decoration: none;
-            color: white;
-            font-size: 20px;
-            text-shadow: 1px 1px 5px black;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+
+        .mainPlace {
+            /* position: relative; */
+            text-align: center;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 50px;
+            gap: 20px;
+            #pic1, #pic3 {
+                width: 25vw;
+            }
+            #pic2 {
+                width: 20.8vw;
+            }
+            .pic1, .pic2, .pic3 {
+                position: relative;
+                transition: 0.3s;
+            }
+            .pic1:hover,  .pic2:hover, .pic3:hover{
+                filter: brightness(80%);
+                transform: scale(1.1);
+            }
+            .text1 a, .text2 a, .text3 a {
+                text-decoration: none;
+                color: white;
+                font-size: 20px;
+                text-shadow: 1px 1px 5px black;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
         }
     }
 }
 footer {
+    margin-top: 100px;
     padding: 20px 150px;
     width: 100%;   
     display: flex;
     flex-direction: column;
     justify-content: center; 
-    height: 60vh;
+    height: 70vh;
+    color: white;
+    background: 
+    linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    cursor: pointer;
+    #exploreFooter {
+        margin-top: 20px;
+        text-align: center;
+    }
+
     .footerText {
         display: flex;
         justify-content: center;
@@ -210,29 +223,47 @@ footer {
         gap: 10px;
     }
     .footerCopyright {
+        margin-top: 100px;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         gap: 50px; 
         width: 100%;
     }
-    .socialMedia {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 100;
-        width: 140px;
-        gap: 20px;
+    .ourSocial {
+        text-align: center;
+        transition: 0.3s;
+        .socialMedia {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            width: 140px;
+            gap: 20px;
+        }
     }
-    svg{
+    svg, .copyright,  .customerService a {
         fill: white;
-    }
-    label {
-        margin-top: 20px;
-    }
-    .customerService, .copyright {
-        gap: 20px;
         color: white;
+        transition: 0.3s;
+        list-style: none;
+        text-decoration: none;
+    }
+    #a, #b, #c, #d {
+        transition: 0.3s;
+    }
+    .ourSocial:hover {
+        color: #92ffbe;
+    }
+    #a:hover, #b:hover, #c:hover, #d:hover {
+        transform: scale(1.3);
+        fill: #3eff8b;
+    }
+    .copyright.copyright:hover, .customerService:hover{
+        color: #92ffbe;
+    }
+    a:hover{
+        color: #92ffbe;
     }
 }
 /* nav bar for mobile */
@@ -261,4 +292,108 @@ footer {
         justify-content: center;
         align-items: center; 
     } 
+    .explore {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6)),url("./Image/angkor-thom-causeway.jpg");
+        padding: 20px 150px;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+}
+@media (max-width: 440px) {
+    header {
+        background: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px 150px;
+        transition: 0.6s;
+        z-index: 10;
+        backdrop-filter: blur(1px);     
+    }
+    header ul {
+        list-style: none;
+        width: 100%; 
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 50px;
+    } 
+    header #logo {
+        position: relative;
+        font-weight: bold;
+    }
+    header ul li {
+        display: inline-block;
+        position: relative;
+    }
+    header ul li a {
+        transition:0.2s;
+    }
+    header ul li a:hover {
+        color: #00AA44;
+        padding: 5px;
+    }
+    #logo, li a{
+        position: relative;
+        width: 100%;
+        font-size: 20px;    
+        color: white;
+        text-decoration: none;
+    }
+    #travel {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .boxtoy {
+        position: relative;
+        height: 200px;
+        position: absolute;
+        width: 200px;
+    }  
+    .dropDown {
+        display: none;
+    }
+    .dropDown ul li a {
+        color: black;
+    }
+    header ul li:hover .dropDown{
+        transition: 0.3s;
+        left: 0;
+        display: block;
+        position: absolute;
+        margin-top: 10px;
+        background-color: white;
+    }
+    header ul li:hover .dropDown ul {
+        display: block;
+        padding: 10px;
+    }
+    header ul li:hover .dropDown ul li {
+        padding: 10px;
+        width: 120px;
+        display: block;
+    }
+    header ul li:hover .dropDown ul li a:hover {
+        color: #ffffff;
+        background-color: rgb(27, 27, 27);
+        border-radius: 5px;
+    }   
+    .line {     
+        position: relative;
+        width: 100%;
+        margin-top: 10px;
+        background-color: white;
+        padding: 1px;
+    }
 }
