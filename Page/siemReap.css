@@ -272,7 +272,7 @@ header ul li:hover .dropDown {
         margin-top: 40px;
         display: grid;
         grid-template-columns: repeat(3,1fr);
-        grid-template-rows: 200px;
+        /* grid-template-rows: 200px; */
         border-radius: 20px;
         background-color: #2b2b2b;
         padding: 20px 50px;
@@ -415,36 +415,39 @@ button:hover {
     background-color: #57ff9a;
 }
 #recommend, #containerForHotel {
+    width: 100%;
     background-color: #030303;
-    /* margin-top: 100px; */
-    padding: 50px;
-}
-.placeTostay {
-    padding: 0px 50px;
-    text-align: start;
-    color: white;
+    padding: 40px 0px;
 
-    h1 {
-        font-size: 30px;
-    }
-    span {
-        color: #00AA44;
-    }
-}
-.recommendPlace, .Hotel {
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 100px;
-
-    img {
-        width: 350px;
-        height: 300px;
-    }
-    .contentOfplace {
-        margin-top: 30px;
+    .placeTostay {
+        padding: 20px 50px;
+        text-align: start;
         color: white;
+    
+        h1 {
+            font-size: 30px;
+        }
+        span {
+            color: #00AA44;
+        }
+    }
+    .recommendPlace, .Hotel {
+        width: 100%;
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 100px;
+    
+        img {
+            width: 320px;
+            height: 250px;
+        }
+        .contentOfplace {
+            width: 100%;
+            margin-top: 30px;
+            color: white;
+        }
     }
 }
 footer {
@@ -459,6 +462,7 @@ footer {
     background: 
     linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     cursor: pointer;
+
     #exploreFooter {
         margin-top: 20px;
         text-align: center;
@@ -608,6 +612,7 @@ footer {
         height: 100vh;
         .homeText {
             padding: 20px 50px;
+
             .bg {
                 height: 10vw;
             }
@@ -615,20 +620,20 @@ footer {
     }
     #midText {
         font-size: 10px;
-        width: 70vh;
+        width: 100%;
     }
     p {
-        width: 60vh;
+        font-size: 25px;
+        width: 100%;
     }
     .homeText {
         position: absolute;
         left: 0;
         top: 60%;
-        padding: 20px 50px;
+        padding: 10px 100px;
         .bg {
             justify-self: center;
-
-            height: 20vw;
+            height: 15vw;
         }
         a {
             font-size: 20px;
@@ -639,74 +644,59 @@ footer {
     }
     .logo {
         width: 100%;
+
+        #logo2 {
+            width: 50%;
+        }
+        .line {
+            width: 60%; /* Adjust line width */
+        }
     }
     .BestPlace {
-        padding: 10px 10px; /* Reduce padding */
+        padding: 10px 50px; /* Reduce padding */
 
         .allPlace {
-            padding: 10px;
-            grid-template-columns: repeat(1, 1fr);
+            padding: 20px;
+            grid-template-columns: repeat(3, 1fr);
             grid-gap: 50px;
         }
         .place1, .place2, .place3 {
             text-align: center;
         }
     }
-    .line {
-        width: 60%; /* Adjust line width */
-    }
-    .containerForPlace {
-        .allPlace {
-            flex-direction: column; /* Stack places vertically */
-            gap: 15px; /* Add spacing between items */
-        }
-        .place1, .place2, .place3 {
-            
-            font-size: 18px; /* Slightly smaller font size */
-            line-height: 30px; /* Adjust line height */
-            text-align: center; /* Center text for all places */
-        }
-        p {
-            position: relative;
-            left: 10%;
-        }
-        .button, .button2 {
-            a {
-                width: 5%;
-            }
-        }
-    }
+
     .wrapper {
         padding: 10px 20px;
         width: 100vh;
     }
-    .button a, .button2 a {
-        width: 80%; /* Adjust button width */
-        font-size: 18px; /* Reduce font size for smaller screens */
-    }
     .ourMap {
-        padding: 20px 0px; /* Adjust padding */
         .map {
             width: 90vw; /* Adjust map width */
         }
     }
     #containerForHotel, #recommend {
-        padding: 10px 100px;
-        
-        img {
-            width: 600px;
-            height: 450px;
-        }
+        padding: 50px;
+        width: 100%;
 
-        .contentOfplace {
-            h1 {
-                font-size: 30px;
+        .Hotel, .recommendPlace {
+            width: 100%;
+            padding:10px;
+
+            img {
+                width: 87vh;
+                height: 550px;
             }
+        }
+        .placeTovisit {
+            width: 100%;
+        }
+        .contentOfplace {
+            
             p {
-                font-size: 20px;
+                font-size: 15px;
             }
             button {
-                padding: 20px 25px;
+                padding: 10px 15px;
             }
         }
     }
@@ -714,41 +704,40 @@ footer {
         padding: 20px 30px;
         .footerText {
             gap: 5px;
-
-            #exploreFooter {
-                width: 100%;
-                font-size: 15px;
-            }
         }
+        
         .footerCopyright {
-            font-size: 10px;
+            font-size: 14px;
             gap: 20px;
             display: flex;
             align-items: center;
-            flex-direction: column;
         }
-        .copyright {
+        .copyright,.customerService {
             font-size: 14px;
         }
         .ourSocial {
             text-align: start;
+            
             .socialMedia {
                 gap: 10px;
                 width: 100px;
             }
         }
-        .customerService {
-            font-size: 14px;
+        .label, #copyright , #a, #b, #c, #d {
+            margin-top: 5px;
         }
     }
 }
 @media (max-width: 440px) {
-    #midText {
-        font-size: 10px;
-        width: 60vh;
-    }
-    p {
-        width: 60vh;
+    .bgImg {
+        #midText {
+            font-size: 35px;
+            width: 100%;
+        }
+        p {
+            font-size: 15px;
+            width: 100%;
+        }
     }
     .picture {
         .grid-img {
@@ -761,42 +750,65 @@ footer {
             }
         }
     }
-    #Placetext {
-        font-size: 24px; /* Adjust header size */
-    }
-    .place1, .place2, .place3 {
-        position: relative;
-        left: -10%;
-    }
-    
-    .button a {
-        padding: 10px; /* Reduce padding for buttons */
-        width: 5%;
-    }
-
-    .button {
-        /* width: 50vh; */
-        a {
-            padding: 5xpx;
-            width: 80vh;
-            font-size: 16px;
+    .BestPlace {
+        padding: 20px 50px;
+        #Placetext {
+            font-size: 24px; /* Adjust header size */
+        }
+        .allPlace {
+            width: 100%;
+            padding: 10px;
+            grid-template-columns: repeat(1,1fr);
+            .place1, .place2, .place3 {
+                line-height: 20px;
+                p {
+                    font-size: 15px;
+                }
+            }
+            .button {
+                padding: 10px 20px;
+                
+            }
+        }
+        .button {
+            a {
+                padding: 5xpx;
+                width: 20vh;
+                font-size: 16px;
+            }
         }
     }
+    
     .wrapper {
         display: flex;
         width: 100%;
+
+        .item1,.item2, .item3, .item4, .item5 {
+            width: 25vh;
+            height: 100px;
+            padding: 10px;
+            background-size: cover;
+            background-position: center;
+        }
     }
-    .item1,.item2, .item3, .item4, .item5 {
-        width: 25vh;
-        height: 100px;
-        padding: 10px;
-        background-size: cover;
-        background-position: center;
+    .ourMap {
+        margin-top: 20px;
+        width: 100%;
+        padding: 10px 50px;
+        h1 {
+            font-size: 20px;
+        }
+        .map {
+            .button2 {
+                a {
+                    width: 20vh;
+                }
+            }
+        }
     }
     #containerForHotel, #recommend {
         padding: 10px;
-        /* width: 100%; */
-
+        width: 100%;
         .placeTostay {
             h1 {
                 font-size: 20px;
@@ -805,14 +817,9 @@ footer {
         .Hotel, .recommendPlace {
             width: 100%;
             padding:10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            gap: 20px;
 
             img {
-                width: 46vh;
+                width: 54vh;
                 height: 350px;
             }
         }
@@ -829,7 +836,22 @@ footer {
             }
         }
     }
-    .ourSocial {
-        justify-self:   flex-start;
+    footer {
+        padding: 10px;
+        #exploreFooter {
+            font-size: 14px;
+            width: 45vh;
+        }
+        .footerCopyright {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .copyright, .ourSocial,.customerService {
+            h2, #copyright, .socialMedia, .label{
+                font-size: 14px;
+            }
+        }
     }
 }
