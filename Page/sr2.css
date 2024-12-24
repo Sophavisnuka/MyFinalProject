@@ -100,20 +100,6 @@ header ul li:hover .dropDown {
 .dropDown ul li a:hover {
     color: #00a040;
 }
-
-/* Mobile styles for dropdown toggle */
-#travel-toggle {
-    display: none; /* Hide checkbox */
-}
-
-#travel-toggle:checked ~ .dropDown {
-    display: block; /* Show dropdown when checked */
-    position: static;
-    background: rgba(255, 255, 255, 0.9);
-    width: 90%; /* Full width for mobile */
-    box-shadow: none;
-}
-
 /* Mobile-specific styles */
 .menu-toggle {
     display: none;
@@ -121,57 +107,82 @@ header ul li:hover .dropDown {
     color: white;
     cursor: pointer;
 }
-
 #menu-toggle {
     display: none; /* Hide the checkbox */
 }
-#dropDown-label {
-    display: none; /* Hide the label */
-}
 nav {
-    margin-top: 49px;
+    margin-left: 20px;
+    margin-top: 5px;
     position: fixed;
     z-index: 10;
     top: 0;
-    width: 100%;
-    display: flex;
     justify-content: center;
     align-items: center;
+    gap: 30px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+/* Style for the toggle button (arrow) */
+#nav-label {
+    width: 120px;
+    opacity: 0;
+    margin-left: 10px;
+    cursor: pointer;
+    display: inline-block;
     padding: 10px;
-    transition: 0.6s;
-    z-index: 1;
-    transition: 0.3s;
+    color: white;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Rotate the arrow when the menu is open */
+#nav-toggle:checked + #nav-label i {
+    transform: rotate(90deg);
+}
+
+/* Style the list container */
+nav ul {
+    border-radius: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    transition: max-height 0.5s ease;
 }
-nav ul {
-    width: 100%; 
-    position: relative;
-    padding: 0 10px;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+/* Expand the menu when toggled */
+#nav-toggle:checked + #nav-label + ul {
+    max-height: 500px;
 }
+
+/* Individual list items */
 nav ul li {
-    display: inline-block;
-    gap: 30px;
-    display: flex;
-    width: 100%; 
+    border-bottom: 1px solid #444;
 }
+
 nav ul li a {
-    text-decoration: none;
-    list-style: none;
     color: white;
-    transition: 0.3s;
-    width: 100px;
-    text-shadow: 1px 1px 2px #000000;
-    font-size: 15px;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
 }
-nav ul li a:hover{
-    color:#92ffbe
+
+nav ul li a:hover {
+    background-color: #555;
 }
+
+/* Responsive Design */
 .line {     
     position: relative;
     width: 100%;
@@ -874,10 +885,8 @@ footer {
     flex-direction: column;
     justify-content: center; 
     height: 70vh;
-    background-color: black;
     color: white;
-    /* background: 
-    linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); */
+    background-color: black;
     cursor: pointer;
     #exploreFooter {
         margin-top: 20px;
@@ -902,6 +911,7 @@ footer {
     .ourSocial {
         text-align: center;
         transition: 0.3s;
+        
         .socialMedia {
             display: flex;
             justify-content: center;
@@ -911,18 +921,19 @@ footer {
             gap: 20px;
         }
     }
-    a #a, a #b, a #c, a#d {
-        width: 20px;
-        transition: 0.3s;
-        list-style: none;
-        text-decoration: none;
-    }
     svg, .copyright,  .customerService a {
         fill: white;
         color: white;
         transition: 0.3s;
         list-style: none;
         text-decoration: none;
+    }
+    #a, #b, #c, #d {
+        margin-top: 20px;
+        transition: 0.3s;
+    }
+    .label, #copyright {
+        margin-top: 20px;
     }
     .ourSocial:hover {
         color: #92ffbe;
@@ -938,7 +949,7 @@ footer {
         color: #92ffbe;
     }
 }
-@media (max-width: 838px) {
+@media (max-width: 840px) {
     .menu-toggle {
         display: block; /* Show hamburger menu */
         opacity: 1;
@@ -956,11 +967,10 @@ footer {
     }
 
     #menu-toggle:checked ~ ul {
-        display: flex; /* Show menu when checkbox is checked */
-        height: auto; /* Adjust height dynamically */
+        display: flex;
+        height: auto; 
         gap: 15px;
     }
-
     header ul li {
         text-align: center;
         margin: 10px 0;
@@ -982,7 +992,7 @@ footer {
         background-color: black;
         display: none; 
         position: absolute;
-        top: -105%;
+        top: 10%;
         left: 100%;
         right: 0; 
         border-radius: 5px;
@@ -998,7 +1008,7 @@ footer {
         margin: 0;
         padding: 0;
     }
-
+    
     .dropDown ul li {
         margin: 5px 0;
     }
@@ -1020,6 +1030,31 @@ footer {
 
     header ul li:hover .dropDown, .dropDown:hover {
         display: block; /* Keep dropdown visible */
+    }
+    .gridImage {
+        position: relative;
+        .grid-img {
+            position: relative;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: 200px 200px 200px;
+        }
+        .image2 {
+            grid-row: span 1;
+        }
+        .midText {
+            z-index: 1;
+            position: absolute;
+            top: 20%;
+            h1 {
+                font-size: 20px;
+            }
+            p {
+                font-size: 12px;
+            }
+            h1 {
+                font-size: 20px;
+            }
+        }
     }
     .containerInfo {
         width: 100%;
@@ -1064,39 +1099,30 @@ footer {
         .footerText {
             gap: 5px;
         }
+        
         .footerCopyright {
-            font-size: 10px;
+            font-size: 14px;
             gap: 20px;
             display: flex;
             align-items: center;
-            /* flex-direction: column; */
         }
-        .copyright {
+        .copyright,.customerService {
             font-size: 14px;
         }
         .ourSocial {
             text-align: start;
+            
             .socialMedia {
                 gap: 10px;
                 width: 100px;
             }
         }
-        .customerService {
-            font-size: 14px;
+        .label, #copyright , #a, #b, #c, #d {
+            margin-top: 5px;
         }
     }
 }
 @media (max-width: 440px) {
-    nav {
-        z-index: 10;
-    }
-    nav ul {
-        overflow: scroll;
-    }
-    nav ul li a {
-        width: 100vh;
-
-    }
     .gridImage {
         position: relative;
         .grid-img {
@@ -1194,6 +1220,23 @@ footer {
             font-size: 15px;
         }
     }
-    
+    footer {
+        padding: 10px;
+        #exploreFooter {
+            font-size: 14px;
+            width: 45vh;
+        }
+        .footerCopyright {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .copyright, .ourSocial,.customerService {
+            h2, #copyright, .socialMedia, .label{
+                font-size: 14px;
+            }
+        }
+    }
 
 }
