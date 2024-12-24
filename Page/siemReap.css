@@ -1,0 +1,835 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+    background-color: #12150F;    
+}
+/* Nav bar is here */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+header #logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+}
+
+header ul li {
+    position: relative;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+header ul li a:hover {
+    color: #5fff9f;
+}
+
+/* Dropdown styles */
+header ul li:hover .dropDown {
+    display: block; /* Show dropdown on hover */
+}
+
+.dropDown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.dropDown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropDown ul li {
+    margin: 5px 0;
+}
+
+.dropDown ul li a {
+    color: black;
+    font-size: 14px;
+    text-decoration: none;
+    display: block;
+    text-align: start;
+    border-radius: 5px;
+    transition: 0.3s;
+    line-height: 10px;
+}
+
+.dropDown ul li a:hover {
+    color: #00a040;
+}
+
+/* Mobile styles for dropdown toggle */
+#travel-toggle {
+    display: none; /* Hide checkbox */
+}
+
+#travel-toggle:checked ~ .dropDown {
+    display: block; /* Show dropdown when checked */
+    position: static;
+    background: rgba(255, 255, 255, 0.9);
+    width: 90%; /* Full width for mobile */
+    box-shadow: none;
+}
+
+/* Mobile-specific styles */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+#menu-toggle {
+    display: none; /* Hide the checkbox */
+}
+#dropDown-label {
+    display: none; /* Hide the label */
+}
+
+/* Show menu when active */
+.line {     
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    background-color: white;
+    padding: 1px;
+}
+.bgImg {
+    position: relative;
+    padding: 20px 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("../Image/angkorThomBg.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+    span {
+        color: #00AA44;
+    }
+    h1, p, h2{
+        text-align: center;
+        color: white;
+    }
+    #midText, h1 {
+        font-size: 50px;
+        font-weight: bold;
+    }
+    .homeText {
+        width: 100%;
+        padding: 20px 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+        .bg {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-top: 20px;
+            height: 3vw;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+    
+            a {
+                list-style: none;
+                text-decoration: none;
+                color: white;
+                transition: 0.3s;
+            }
+            a:hover {
+                color: #57ff9a;
+            }
+        }
+        label {
+            color: white;
+        }
+    }
+}
+.logo{
+    padding: 20px 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #logo2 {
+        width: 5%;
+        filter: brightness(0) saturate(100%) invert(100%) sepia(48%) saturate(56%) hue-rotate(281deg) brightness(117%) contrast(100%);    
+    }
+}
+.picture{
+    /* padding: 20px 150px;     */
+    width: 100%;
+
+    .grid-img{
+        color: white;
+        gap: 10px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 300px 300px 100px;
+        
+        .image1, .image2, .image3, .image4, .image5, .image6 {
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            transition: 0.3s;
+        }
+        .image1 {
+            background-image: url("../Image/Ta-Prohm-1.jpg");   
+        }
+        .image2 {
+            background-color: rgb(255, 153, 153);
+            background-image: url("../Image/pub-street.jpg");    
+        }
+        .image3 {
+            background-color: rgb(79, 252, 255);
+            background-image: url("../Image/sunsetBakheng.jpg");    
+        }
+        .image4 {
+            background-color: rgb(54, 118, 255);
+            background-image: url("../Image/Srah-Srang.png");   
+        }
+        .image5 {
+            grid-row: 2/4;
+            grid-column: span 2;    
+            background-color: rgb(0, 208, 142);
+            background-image: url("../Image/angkorMuseum.jpg");
+        }
+    }
+}
+.BestPlace {
+    margin-top: 100px;
+    padding: 50px 150px;    
+    width: 100%;
+    background-color: #0f0f0f;
+
+    .line {
+        justify-self: center;
+        width: 40%;
+    }
+    #Placetext {
+        color: white;
+        text-align: center;
+
+        span {
+            color: #00AA44;
+        }
+    }
+        
+    .allPlace {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 200px;
+        border-radius: 20px;
+        background-color: #2b2b2b;
+        padding: 20px 50px;
+    }
+    .place1, .place2, .place3 {
+        color: white;
+        font-size: 20px;
+        line-height: 40px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
+.button, .button2 {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+        a {
+            list-style: none;
+            text-decoration: none;
+            border-style: none;
+            width: 25%;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 15px;
+            transition: 0.3s;
+            color: black;
+            background-color: #00AA44;
+    }
+    a:hover {
+        background-color: #00ff66;
+        transform: scale(1.05);
+    }
+}
+.wrapper {
+    padding: 20px 150px;
+
+    .HorizontalScroll {
+        margin-top: 150px;
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        grid-gap: 50px;
+        overflow-x:scroll;
+
+        .item1,.item2, .item3, .item4, .item5 {
+            width: 45rem;
+            height: 500px;
+            padding: 30px;
+            background-size: cover;
+            background-position: center;
+        }
+        .item1 {
+            background-image: url("../Image/IMG20241130072421.jpg");
+        }
+        .item2 {
+            background-image: url("../Image/IMG20241130113446.jpg");
+        }
+        .item3 {
+            background-image: url("../Image/IMG20241201112705.jpg");
+        }
+        .item4 {
+            background-image: url("../Image/IMG20241201203839.jpg");
+        }
+        .item5 {
+            background-image: url("../Image/Preah-Dark-Village.png");
+        }
+    }
+}
+.ourMap {
+    position: relative;
+    padding: 20px 150px;
+    width: 100%;
+    margin-top: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    #AngkorMap {
+        color:#00ff66;
+        line-height: 110px;
+    }
+    .lineOfMap {
+        position: relative;
+        width: 100%;
+        margin-top: 10px;
+        background-color: white;
+        padding: 1px;
+        
+        .circle1, .circle2, .circle3 {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            padding: 15px;
+            background-color: white;
+        }
+        .circle2 {
+            left: 50%;
+        }
+        .circle3 {
+            left: 80%;
+        }
+    }
+    .map {   
+        margin-top: 40px;
+        width: 65vw;
+        iframe {
+            width: 100%;
+        }
+    } 
+}
+a {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    font-size: 16px;
+}
+button {
+    margin-top: 20px;
+    border-style: none;
+    padding: 10px 15px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 15px;
+    background-color:#00AA44;
+    transition: 0.3s;
+    clip-path: polygon(0 0, 94% 0, 100% 100%, 0% 100%);
+
+}
+button:hover {
+    background-color: #57ff9a;
+}
+#recommend, #containerForHotel {
+    background-color: #030303;
+    /* margin-top: 100px; */
+    padding: 50px;
+}
+.placeTostay {
+    padding: 0px 50px;
+    text-align: start;
+    color: white;
+
+    h1 {
+        font-size: 30px;
+    }
+    span {
+        color: #00AA44;
+    }
+}
+.recommendPlace, .Hotel {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 100px;
+
+    img {
+        width: 350px;
+        height: 300px;
+    }
+    .contentOfplace {
+        margin-top: 30px;
+        color: white;
+    }
+}
+footer {
+    margin-top: 100px;
+    padding: 20px 150px;
+    width: 100%;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    height: 70vh;
+    color: white;
+    background: 
+    linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    cursor: pointer;
+    #exploreFooter {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .footerText {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .footerCopyright {
+        margin-top: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px; 
+        width: 100%;
+    }
+    .ourSocial {
+        text-align: center;
+        transition: 0.3s;
+        .socialMedia {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            width: 140px;
+            gap: 20px;
+        }
+    }
+    svg, .copyright,  .customerService a {
+        fill: white;
+        color: white;
+        transition: 0.3s;
+        list-style: none;
+        text-decoration: none;
+    }
+    #a, #b, #c, #d {
+        margin-top: 20px;
+        transition: 0.3s;
+    }
+    .label, #copyright {
+        margin-top: 20px;
+    }
+    .ourSocial:hover {
+        color: #92ffbe;
+    }
+    #a:hover, #b:hover, #c:hover, #d:hover {
+        transform: scale(1.3);
+        fill: #3eff8b;
+    }
+    .copyright.copyright:hover, .customerService:hover{
+        color: #92ffbe;
+    }
+    a:hover{
+        color: #92ffbe;
+    }
+}
+
+@media (max-width: 838px) {
+    .menu-toggle {
+        display: block; /* Show hamburger menu */
+        opacity: 1;
+    }
+
+    header ul {
+        display: none; /* Hide the menu initially */
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    #menu-toggle:checked ~ ul {
+        display: flex; /* Show menu when checkbox is checked */
+        height: auto; /* Adjust height dynamically */
+        gap: 15px;
+    }
+
+    header ul li {
+        text-align: center;
+        margin: 10px 0;
+        position: relative; /* Ensure dropdown is positioned relative to the parent */
+    }
+
+    header ul li a {
+        font-size: 18px; /* Adjust font size */
+        color: white; /* Ensure consistent link color */
+        text-decoration: none;
+    }
+
+    header ul li a:hover {
+        color: #5fff9f; /* Add hover effect for links */
+    }
+
+    /* Dropdown menu styling */
+    .dropDown {
+        background-color: black;
+        display: none; 
+        position: absolute;
+        top: -105%;
+        left: 100%;
+        right: 0; 
+        border-radius: 5px;
+        padding: 10px;
+        z-index: 5;
+        width: 100%;
+        min-width: 150px; 
+    }
+
+    .dropDown ul {
+        gap: 15px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .dropDown ul li {
+        margin: 5px 0;
+    }
+
+    .dropDown ul li a {
+        font-size: 16px;
+        color: white; /* Change text color to white */
+        text-decoration: none;
+        display: block;
+        text-align: start;
+        padding: 5px;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+
+    .dropDown ul li a:hover {
+        color: rgb(0, 220, 40); 
+    }
+
+    header ul li:hover .dropDown, .dropDown:hover {
+        display: block; /* Keep dropdown visible */
+    }
+    .bgImg {
+        padding: 20px 50px;
+        height: 100vh;
+        .homeText {
+            padding: 20px 50px;
+            .bg {
+                height: 10vw;
+            }
+        }
+    }
+    #midText {
+        font-size: 10px;
+        width: 70vh;
+    }
+    p {
+        width: 60vh;
+    }
+    .homeText {
+        position: absolute;
+        left: 0;
+        top: 60%;
+        padding: 20px 50px;
+        .bg {
+            justify-self: center;
+
+            height: 20vw;
+        }
+        a {
+            font-size: 20px;
+        }
+        span {
+            font-size: 16px;
+        }
+    }
+    .logo {
+        width: 100%;
+    }
+    .BestPlace {
+        padding: 10px 10px; /* Reduce padding */
+
+        .allPlace {
+            padding: 10px;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 50px;
+        }
+        .place1, .place2, .place3 {
+            text-align: center;
+        }
+    }
+    .line {
+        width: 60%; /* Adjust line width */
+    }
+    .containerForPlace {
+        .allPlace {
+            flex-direction: column; /* Stack places vertically */
+            gap: 15px; /* Add spacing between items */
+        }
+        .place1, .place2, .place3 {
+            
+            font-size: 18px; /* Slightly smaller font size */
+            line-height: 30px; /* Adjust line height */
+            text-align: center; /* Center text for all places */
+        }
+        p {
+            position: relative;
+            left: 10%;
+        }
+        .button, .button2 {
+            a {
+                width: 5%;
+            }
+        }
+    }
+    .wrapper {
+        padding: 10px 20px;
+        width: 100vh;
+    }
+    .button a, .button2 a {
+        width: 80%; /* Adjust button width */
+        font-size: 18px; /* Reduce font size for smaller screens */
+    }
+    .ourMap {
+        padding: 20px 0px; /* Adjust padding */
+        .map {
+            width: 90vw; /* Adjust map width */
+        }
+    }
+    #containerForHotel, #recommend {
+        padding: 10px 100px;
+        
+        img {
+            width: 600px;
+            height: 450px;
+        }
+
+        .contentOfplace {
+            h1 {
+                font-size: 30px;
+            }
+            p {
+                font-size: 20px;
+            }
+            button {
+                padding: 20px 25px;
+            }
+        }
+    }
+    footer {
+        padding: 20px 30px;
+        .footerText {
+            gap: 5px;
+
+            #exploreFooter {
+                width: 100%;
+                font-size: 15px;
+            }
+        }
+        .footerCopyright {
+            font-size: 10px;
+            gap: 20px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        .copyright {
+            font-size: 14px;
+        }
+        .ourSocial {
+            text-align: start;
+            .socialMedia {
+                gap: 10px;
+                width: 100px;
+            }
+        }
+        .customerService {
+            font-size: 14px;
+        }
+    }
+}
+@media (max-width: 440px) {
+    #midText {
+        font-size: 10px;
+        width: 60vh;
+    }
+    p {
+        width: 60vh;
+    }
+    .picture {
+        .grid-img {
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: 300px 300px 300px 300px;
+            .image1, .image2, .image3, .image4, .image5, .image6 {
+                background-size: cover;
+                background-position: center;
+                transition: 0.3s;
+            }
+        }
+    }
+    #Placetext {
+        font-size: 24px; /* Adjust header size */
+    }
+    .place1, .place2, .place3 {
+        position: relative;
+        left: -10%;
+    }
+    
+    .button a {
+        padding: 10px; /* Reduce padding for buttons */
+        width: 5%;
+    }
+
+    .button {
+        /* width: 50vh; */
+        a {
+            padding: 5xpx;
+            width: 80vh;
+            font-size: 16px;
+        }
+    }
+    .wrapper {
+        display: flex;
+        width: 100%;
+    }
+    .item1,.item2, .item3, .item4, .item5 {
+        width: 25vh;
+        height: 100px;
+        padding: 10px;
+        background-size: cover;
+        background-position: center;
+    }
+    #containerForHotel, #recommend {
+        padding: 10px;
+        /* width: 100%; */
+
+        .placeTostay {
+            h1 {
+                font-size: 20px;
+            }
+        }
+        .Hotel, .recommendPlace {
+            width: 100%;
+            padding:10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+
+            img {
+                width: 46vh;
+                height: 350px;
+            }
+        }
+        .placeTovisit {
+            width: 100%;
+        }
+        .contentOfplace {
+            
+            p {
+                font-size: 15px;
+            }
+            button {
+                padding: 10px 15px;
+            }
+        }
+    }
+    .ourSocial {
+        justify-self:   flex-start;
+    }
+}

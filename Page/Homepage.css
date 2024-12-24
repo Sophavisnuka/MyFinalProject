@@ -1,0 +1,731 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+    color: white;
+}
+
+/* Nav bar styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+header #logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+}
+
+header ul li {
+    position: relative;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+header ul li a:hover {
+    color: #5fff9f;
+}
+
+/* Dropdown styles */
+header ul li:hover .dropDown {
+    display: block; /* Show dropdown on hover */
+}
+
+.dropDown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.dropDown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropDown ul li {
+    margin: 5px 0;
+}
+
+.dropDown ul li a {
+    color: black;
+    font-size: 14px;
+    text-decoration: none;
+    display: block;
+    text-align: start;
+    border-radius: 5px;
+    transition: 0.3s;
+    line-height: 10px;
+}
+
+.dropDown ul li a:hover {
+    color: #00a040;
+}
+
+/* Mobile-specific styles */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+#menu-toggle {
+    display: none; /* Hide the checkbox */
+}
+
+.line {     
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    background-color: rgb(255, 255, 255);
+    padding: 1px;
+}
+.frontImg {
+    position: relative;
+
+    img {
+        border-radius: 10px;
+        object-fit: cover;
+        width: 100%;
+    }
+    .homeText {
+        
+        position: absolute;
+        left: 0;
+        top: 20%;
+        padding: 20px 150px;
+
+        .bg {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-top: 20px;
+            height: 3vw;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+    
+            a {
+                list-style: none;
+                text-decoration: none;
+                color: white;
+                transition: 0.3s;
+            }
+            a:hover {
+                color: #57ff9a;
+            }
+        }
+        #midText, span {
+            color: rgb(255, 255, 255);
+        }
+        #midText {
+            font-size: 4vw;
+            font-weight: bold;
+        }
+        span {
+            font-size: 16px;
+            font-weight: normal;
+        }
+        
+    }
+    .context {
+        margin-top: 20px;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+
+        .destination, .people {
+            cursor: pointer;
+            padding: 10px 20px;
+            border-radius: 10px;
+            background-color: white;
+            color: black;
+
+            h1, p {
+                font-size: 1vw;
+            }
+        }
+        .search {
+            cursor: pointer;
+            padding: 15px;
+            grid-column: span 2;
+            color: black;
+            background-color: #ffffff;
+            border-radius: 10px;
+        }
+    }
+    .imageOfHomepage {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: 200px;
+        gap: 10px;
+
+        .home1, .home2, .home3 {
+            background-position: center;
+            background-size: cover;
+            transition: 0.3s;
+        }
+        .home1:hover, .home2:hover, .home3:hover {
+            filter: brightness(70%);
+        }   
+        .home1 {
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            grid-column: span 2;
+            background-image: url("../Image/angkor_wat_sunrise.jpg");
+        }
+        .home2 {
+            background-image: url("../Image/KohRong.jpg");
+        }
+        .home3 {
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            background-image: url("../Image/mountain.jpg");
+        }
+    }
+}
+
+.container {
+    margin-top: 50px;
+    width: 100%;
+    padding: 20px 150px;
+    background-color: #162438;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    .lorem1 {
+        
+        h1 {
+            font-size: 50px;
+            font-weight: lighter;
+        }
+    }
+
+    .homeImage {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 300px 300px;
+        grid-gap: 20px;
+    
+        .homeImg1, .homeImg2, .homeImg3, .homeImg4 {
+            padding: 20px;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            transition: 0.3s;
+            color: white;
+        }
+        .homeImg1:hover, .homeImg2:hover, .homeImg3:hover, .homeImg4:hover {
+            filter: brightness(70%);
+        }
+        .homeImg1 {
+            grid-column: span 2;
+            background-image: url("../Image/bgIMG2.jpg");
+        }
+        .homeImg2 {
+            background-image: url("../Image/AngkorThom.jpeg");
+        }
+        .homeImg3 {
+            background-image: url("../Image/angkorMuseum.jpg");
+        }
+        .homeImg4 {
+            grid-column: span 2;
+            background-image: url("../Image/BakhengTemple.jpeg");
+        }
+    }
+    .text1 {
+        position: absolute;
+        top: 70%;
+    }
+}
+.container2 {
+    width: 100%;
+    
+    .con2text{
+        width: 100%;
+        padding: 20px 150px;
+        text-align: center;
+        color: rgb(0, 0, 0);
+        background-color: #ffffff;
+
+        h1 {
+            font-size: 50px;
+            font-weight: lighter;
+        }
+        
+    }
+    .imgOfcon2 {
+        width: 100%;
+        margin-top: 50px;   
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 500px 0;
+        
+        .box1 {
+            padding: 20px 50px;
+            line-height: 30px;
+            color: rgb(0, 0, 0);
+            background-color: #a7d1ff;
+
+            .box1Img {
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                grid-template-rows: 200px 200px;
+                gap: 20px;
+
+                .boxImg1, .boxImg2, .boxImg3, .boxImg4, .boxImg5 {
+                    background-position: center;
+                    background-size: cover;
+                    transition: 0.3s;
+                }
+                .boxImg1:hover, .boxImg2:hover, .boxImg3:hover, .boxImg4:hover, .boxImg5:hover {
+                    filter: brightness(70%);
+                }
+                .boxImg1 {
+                    background-image: url("../Image/Songsa.jpg");
+                }
+                .boxImg2 {
+                    background-image: url("../Image/sihanoukeville-beach-1.jpg");
+                }
+                .boxImg3 {
+                    background-image: url("../Image/ming.jpg");
+                }
+                .boxImg4 {
+                    background-image: url("../Image/koh-rong-samloem.jpg");
+                }
+                .boxImg5 {
+                    background-image: url("../Image/sihanoukville2.jpg");
+                }
+            }
+            a {
+                list-style: none;
+                text-decoration: none;
+                text-align: center;
+                align-self: center;
+                button  {
+                    margin-top: 20px;
+                    border-style: none;
+                    color: rgb(255, 255, 255);
+                    background-color:#006aff;
+                    padding: 20px;
+                    transition: 0.3s;
+                }
+                button:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .box2 {
+            background-image: url("../Image/KohRong.jpg");
+            background-size: cover;
+            background-position: center;
+
+            .text2 {  
+                position: absolute;
+                top: 0;
+                z-index: 10;
+            }
+        }
+    }
+    .imgOfkps {
+        margin-top: 50px;
+    }
+}
+.Mountains {
+    width: 100%;
+    padding-top: 50px;
+    #p1 {
+        padding: 20px 150px;
+        color: black;
+    }
+    .mountText {
+        padding: 20px 50px;
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h1 {
+            font-size: 40px;
+            font-weight: lighter;
+        }
+        p {
+            width: 40%;
+        }
+    }
+    .imgOfMountain {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        .img1, .img2, .img3 {
+            width: 100%;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            transition: 0.3s;
+        }
+        .img1:hover, .img2:hover, .img3:hover {
+            filter: brightness(70%);
+        }
+        .img1 {
+            background-image: url("../Image/mount1.jpg");
+        }
+        .img2 {
+            background-image: url("../Image/mount2.jpg");
+        }
+        .img3 {
+            background-image: url("../Image/mount3.jpg");
+        }
+    }
+}
+footer {
+    color: white;
+    margin-top: 100px;
+    padding: 20px 150px;
+    width: 100%;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    cursor: pointer;
+
+    #exploreFooter {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .footerText {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .footerCopyright {
+        margin-top: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px; 
+        width: 100%;
+    }
+    .ourSocial {
+        text-align: center;
+        transition: 0.3s;
+        .socialMedia {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            width: 140px;
+            gap: 20px;
+        }
+    }
+    svg, .copyright,  .customerService a {
+        fill: white;
+        color: white;
+        transition: 0.3s;
+        list-style: none;
+        text-decoration: none;
+    }
+    #a, #b, #c, #d {
+        transition: 0.3s;
+    }
+    .ourSocial:hover {
+        color: #92ffbe;
+    }
+    #a:hover, #b:hover, #c:hover, #d:hover {
+        transform: scale(1.3);
+        fill: #3eff8b;
+    }
+    .copyright.copyright:hover, .customerService:hover{
+        color: #92ffbe;
+    }
+    a:hover{
+        color: #92ffbe;
+    }
+}
+@media screen and (max-width: 820px) {
+    .menu-toggle {
+        display: block; /* Show hamburger menu */
+        opacity: 1;
+    }
+
+    header ul {
+        display: none; /* Hide the menu initially */
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    #menu-toggle:checked ~ ul {
+        display: flex; /* Show menu when checkbox is checked */
+        height: auto; /* Adjust height dynamically */
+        gap: 15px;
+    }
+
+    header ul li {
+        text-align: center;
+        margin: 10px 0;
+        position: relative; /* Ensure dropdown is positioned relative to the parent */
+    }
+
+    header ul li a {
+        font-size: 18px; /* Adjust font size */
+        color: white; /* Ensure consistent link color */
+        text-decoration: none;
+    }
+
+    header ul li a:hover {
+        color: #5fff9f; /* Add hover effect for links */
+    }
+
+    /* Dropdown menu styling */
+    .dropDown {
+        background-color: black;
+        display: none; 
+        position: absolute;
+        top: -105%;
+        left: 100%;
+        right: 0; 
+        border-radius: 5px;
+        padding: 10px;
+        z-index: 5;
+        width: 100%;
+        min-width: 150px; 
+    }
+
+    .dropDown ul {
+        gap: 15px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .dropDown ul li {
+        margin: 5px 0;
+    }
+
+    .dropDown ul li a {
+        font-size: 16px;
+        color: white; /* Change text color to white */
+        text-decoration: none;
+        display: block;
+        text-align: start;
+        padding: 5px;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+
+    .dropDown ul li a:hover {
+        color: rgb(0, 220, 40); 
+    }
+
+    header ul li:hover .dropDown, .dropDown:hover {
+        display: block; /* Keep dropdown visible */
+    }
+
+    .frontImg {
+        img {
+            height: 80vh;
+        }
+        .homeText {
+            position: absolute;
+            left: 0;
+            top: 25%;
+            padding: 20px 50px;
+            .bg {
+                height: 7vw;
+            }
+            #midText {
+                font-size: 4vw;
+            }
+            a {
+                font-size: 14px;
+            }
+            span {
+                font-size: 16px;
+            }
+        }
+        .context {
+            .destination, .people {
+                h1, p {
+                    font-size: 1vw;
+                }
+            }
+            .search {
+                padding: 15px;
+            }
+        }
+    }
+    .container {
+        width: 100%;
+        padding: 20px;
+
+        p {
+            font-size: 25px;
+        }
+        .homeImage {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: 300px 300px 300px 300px;
+
+            .homeImg2 {
+                grid-column: span 2;
+            }
+        }
+    }
+    .con2text {
+        width: 100%;
+        padding: 10px;
+
+        h1, h3 {
+            justify-self: center;
+            width: 50vh;
+            font-size: 20px;
+        }
+        p {
+            text-align: start;
+            justify-self: center;
+            font-size: 15px;
+            width: 50vh;
+        }
+    }
+    .imgOfcon2 {
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows:  500px 1000px;
+        gap: 20px;
+        
+        .box1 {
+            grid-column: span 2;
+            grid-template-rows: 400px 400px;
+        }
+        .box2 {
+            padding: 20px 50px;
+            grid-row: span 2;
+            grid-column: span 2;
+        }
+        
+    }
+    .Mountains {
+        #p1 {
+            padding: 20px 50px;
+        }
+        .mountText {
+            padding: 20px 50px;
+            flex-direction: column;
+            h1 {
+                font-size: 30px;
+            }
+            p {
+                width: 100%;
+            }
+        }
+        .imgOfMountain {
+            flex-direction: column;
+            gap: 20px;
+            .img1, .img2, .img3 {
+                height: 300px;
+            }
+        }
+    }
+    footer {
+        padding: 20px 30px;
+        .footerText {
+            gap: 5px;
+        }
+        .footerCopyright {
+            font-size: 10px;
+            gap: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .copyright {
+            font-size: 14px;
+        }
+        .ourSocial {
+            text-align: start;
+            .socialMedia {
+                gap: 10px;
+                width: 100px;
+            }
+        }
+        .customerService {
+            font-size: 14px;
+        }
+    }
+}
+@media screen and (max-width: 440px) {
+    img {
+        height: 100vh;
+    }
+    .homeText {
+        position: absolute;
+        left: 0;
+        top: 10%;
+        padding: 20px 50px;
+    }
+    #exploreFooter {
+        font-size: 14px;
+        width: 50vh;
+    }
+    .footerCopyright {
+        font-size: 10px;
+        gap: 20px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+
+    }
+}
