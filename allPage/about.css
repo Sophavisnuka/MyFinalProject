@@ -110,7 +110,7 @@
         h1{
           transition: 0.5s;
           font-size: 50px;
-          z-index: 10;
+          z-index: 1;
           color:white;
           background-color: none;
         }
