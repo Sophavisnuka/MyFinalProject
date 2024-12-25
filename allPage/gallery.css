@@ -300,3 +300,184 @@ footer {
         color: #92ffbe;
     }
 }
+@media screen and (max-width: 840px) {
+    .menu-toggle {
+        display: block; /* Show hamburger menu */
+        opacity: 1;
+    }
+
+    header ul {
+        display: none; /* Hide the menu initially */
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    #menu-toggle:checked ~ ul {
+        display: flex; /* Show menu when checkbox is checked */
+        height: auto; /* Adjust height dynamically */
+        gap: 15px;
+    }
+
+    header ul li {
+        text-align: center;
+        margin: 10px 0;
+        position: relative; /* Ensure dropdown is positioned relative to the parent */
+    }
+
+    header ul li a {
+        font-size: 18px; /* Adjust font size */
+        color: white; /* Ensure consistent link color */
+        text-decoration: none;
+    }
+
+    header ul li a:hover {
+        color: #5fff9f; /* Add hover effect for links */
+    }
+
+    /* Dropdown menu styling */
+    .dropDown {
+        background-color: black;
+        display: none; 
+        position: absolute;
+        top: -105%;
+        left: 100%;
+        right: 0; 
+        border-radius: 5px;
+        padding: 10px;
+        z-index: 5;
+        width: 100%;
+        min-width: 150px; 
+    }
+
+    .dropDown ul {
+        gap: 15px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .dropDown ul li {
+        margin: 5px 0;
+    }
+
+    .dropDown ul li a {
+        font-size: 16px;
+        color: white; /* Change text color to white */
+        text-decoration: none;
+        display: block;
+        text-align: start;
+        padding: 5px;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+
+    .dropDown ul li a:hover {
+        color: rgb(0, 220, 40); 
+    }
+
+    header ul li:hover .dropDown, .dropDown:hover {
+        display: block; /* Keep dropdown visible */
+    }
+
+    .frontImg {
+        img {
+            height: 80vh;
+        }
+        .homeText {
+            position: absolute;
+            left: 0;
+            top: 25%;
+            padding: 20px 50px;
+            .bg {
+                height: 7vw;
+            }
+            #midText {
+                font-size: 4vw;
+            }
+            a {
+                font-size: 14px;
+            }
+            span {
+                font-size: 16px;
+            }
+        }
+        
+    }
+    .image {
+        padding: 10px;
+
+        .temple, .Sea, .Mountain {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 200px 200px 200px;
+        }
+    }
+    footer {
+        padding: 20px 30px;
+        .footerText {
+            gap: 5px;
+        }
+        
+        .footerCopyright {
+            font-size: 14px;
+            gap: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .copyright,.customerService {
+            font-size: 14px;
+        }
+        .ourSocial {
+            text-align: start;
+            
+            .socialMedia {
+                gap: 10px;
+                width: 100px;
+            }
+        }
+        .label, #copyright , #a, #b, #c, #d {
+            margin-top: 5px;
+        }
+    }
+}
+@media screen and (max-width: 440px) {
+    img {
+        height: 100vh;
+    }
+    .homeText {
+        position: absolute;
+        left: 0;
+        top: 10%;
+        padding: 20px 50px;
+    }
+    .image {
+        padding: 0px;
+        .temple, .Sea, .Mountain {
+            padding: 50px 15px;
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    footer {
+        padding: 10px;
+        #exploreFooter {
+            font-size: 14px;
+            width: 45vh;
+        }
+        .footerCopyright {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .copyright, .ourSocial,.customerService {
+            h2, #copyright, .socialMedia, .label{
+                font-size: 14px;
+            }
+        }
+    }
+    
+}
