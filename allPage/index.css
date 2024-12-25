@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    background-color: #1B2625;
+    /* background-color: #162438; */
+    /* background-color: #12150F;     */
+}
+.nav-pic{
+    width: 100%;
+}
+/* Nav bar is here */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+header #logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+}
+
+header ul li {
+    position: relative;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+header ul li a:hover {
+    color: #5fff9f;
+}
+
+/* Dropdown styles */
+header ul li:hover .dropDown {
+    display: block; /* Show dropdown on hover */
+}
+
+.dropDown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.dropDown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropDown ul li {
+    margin: 5px 0;
+}
+
+.dropDown ul li a {
+    color: black;
+    font-size: 14px;
+    text-decoration: none;
+    display: block;
+    text-align: start;
+    border-radius: 5px;
+    transition: 0.3s;
+    line-height: 10px;
+}
+
+.dropDown ul li a:hover {
+    color: #00a040;
+}
+
+/* Mobile styles for dropdown toggle */
+#travel-toggle {
+    display: none; /* Hide checkbox */
+}
+
+#travel-toggle:checked ~ .dropDown {
+    display: block; /* Show dropdown when checked */
+    position: static;
+    background: rgba(255, 255, 255, 0.9);
+    width: 90%; /* Full width for mobile */
+    box-shadow: none;
+}
+
+/* Mobile-specific styles */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+#menu-toggle {
+    display: none; /* Hide the checkbox */
+}
+#dropDown-label {
+    display: none; /* Hide the label */
+}
+
+.container {
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+h1, h2, h3, p {
+    margin: 20px 0; 
+    text-align: center 
+}
+
+
+.header {
+    font-size: 1.5em; 
+    font-weight: bold; 
+}
+.Kps,.Koh-Kong ,.Kep{
+    padding: 0% 5%;
+}
+.picture{
+    display: flex;
+    row-gap: 50%;
+}
+.picture img{
+    margin-top: 100px;
+    width: 500px;
+}
+.text{
+    margin-top: 150px;
+}
+footer {
+    margin-top: 100px;
+    padding: 20px 150px;
+    width: 100%;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    height: 70vh;
+    color: white;
+    background: 
+    linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    cursor: pointer;
+    #exploreFooter {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .footerText {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .footerCopyright {
+        margin-top: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px; 
+        width: 100%;
+    }
+    .ourSocial {
+        text-align: center;
+        transition: 0.3s;
+        .socialMedia {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            width: 140px;
+            gap: 20px;
+        }
+    }
+    svg, .copyright,  .customerService a {
+        fill: white;
+        color: white;
+        transition: 0.3s;
+        list-style: none;
+        text-decoration: none;
+    }
+    #a, #b, #c, #d {
+        transition: 0.3s;
+    }
+    .ourSocial:hover {
+        color: #92ffbe;
+    }
+    #a:hover, #b:hover, #c:hover, #d:hover {
+        transform: scale(1.3);
+        fill: #3eff8b;
+    }
+    .copyright.copyright:hover, .customerService:hover{
+        color: #92ffbe;
+    }
+    a:hover{
+        color: #92ffbe;
+    }
+}
+.line {     
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    background-color: white;
+    padding: 1px;
+}
+.otres-info, .prince-info, .tabarang-info, .kohKong-info, .kohRong-info, .kingIsland-info , .kepbeach-info ,.Rabbit-Island-info , .Angkol-Beach-info {
+    position: fixed;
+    top: 0;
+    display: none;
+    bottom: 0; 
+    z-index: 10;
+    width: 100%;
+    left: 0;
+    backdrop-filter: blur(10px);
+    padding: 5%;
+    background-color: rgba(0, 0, 0, 0.24);
+    flex-direction: row;
+    gap: 1%;
+
+    .itadori-Yuji {
+        animation: scale 0.4s;
+        display: flex;
+        flex-direction: row; 
+        background-color: #faf7f7;
+        overflow: hidden;
+
+        .image {
+            /* overflow: hidden; */
+            object-fit: cover;
+            padding: 20px;
+            width: 100%;
+            overflow-y: scroll;
+            gap: 25px;
+            background-position: center;
+            background-size: cover;
+            img {
+                border-radius: 20px;
+                object-fit: cover;
+                width: 100%;
+                height: 70%;
+            }
+        }
+        .Sukuna  {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+            overflow-y: auto; /* Add scroll if content overflows */
+            max-height: 600px; /* Limit box height */
+        }
+        .Sukuna h1 {
+            font-size: clamp(1.5rem, 2vw, 2rem); /* Responsive title */
+            margin-bottom: 10px;
+            color: black;
+        }
+        
+        .Sukuna p {
+            font-size: clamp(0.9rem, 1.2vw, 1.4rem); /* Responsive paragraph size */
+            line-height: 1.6; /* Improved readability */
+            text-align: justify; /* Align text neatly */
+            overflow-y: auto; /* Enable scrolling if text exceeds */
+            max-height: 500px; /* Limit height for scrolling */
+            margin: 0; /* Remove unnecessary margins */
+            color: black;
+        }
+        
+        /* Optional scrollbar styling */
+        .Sukuna p::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        .Sukuna p::-webkit-scrollbar-thumb {
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+        }
+        
+        .Sukuna p::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+        .image::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    label {
+        color: black;
+        i {
+            background-color: rgb(255, 255, 255);
+            padding: 15px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            clip-path: circle();
+        }
+    }
+}
+
+#display:checked ~ .otres-info{
+    display: flex;
+}
+#display-prince:checked ~ .prince-info {
+    display: flex;
+}
+#display-tabarang:checked ~ .tabarang-info {
+    display: flex;
+}
+#display-kohKong:checked ~ .kohKong-info {
+    display: flex;
+}
+#Koh-rong:checked ~ .kohRong-info {
+    display: flex;
+}
+#display-kingIsland:checked ~ .kingIsland-info {
+    display: flex;
+}
+#display-kepbeach:checked ~ .kepbeach-info {
+    display: flex;
+}
+#display-RabbitIsland:checked ~ .Rabbit-Island-info {
+    display: flex;
+}
+
+#diplay-Angkol-beach:checked ~ .Angkol-Beach-info{
+    display: flex;
+}

@@ -8,7 +8,7 @@
 body {
     height: 100%;
     font-family: "Roboto", sans-serif;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 /* Nav bar styles */
@@ -237,6 +237,7 @@ header ul li:hover .dropDown {
     gap: 50px;
 
     .lorem1 {
+        color: white;
         
         h1 {
             font-size: 50px;
@@ -332,7 +333,7 @@ header ul li:hover .dropDown {
                     background-image: url("../Image/sihanoukeville-beach-1.jpg");
                 }
                 .boxImg3 {
-                    background-image: url("../Image/ming.jpg");
+                    background-image: url("../SeaImg/Otres-Beach.jpg");
                 }
                 .boxImg4 {
                     background-image: url("../Image/koh-rong-samloem.jpg");
