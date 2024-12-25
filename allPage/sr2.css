@@ -772,14 +772,12 @@ nav ul li a:hover {
     gap: 1%;
 
     .itadori-Yuji {
-        animation: scale 0.4s;
         display: flex;
         flex-direction: row; 
         background-color: #faf7f7;
         overflow: hidden;
 
         .image {
-            /* overflow: hidden; */
             display: flex;
             flex-direction: column;
             object-fit: cover;
@@ -847,6 +845,11 @@ nav ul li a:hover {
             font-size: 1.2rem;
             cursor: pointer;
             clip-path: circle();
+            transition: 0.5s;
+        }
+        i:hover {
+            transform: rotate(180deg);
+            color: #00a040;
         }
     }
 }
@@ -862,19 +865,6 @@ nav ul li a:hover {
 }
 #display-baKheng:checked ~ .baKheng-info {
     display: flex;
-}
-
-
-/* Animation */
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 footer {
@@ -1091,8 +1081,11 @@ footer {
     #otherThanTemple {
         padding: 20px 50px;
     }
-    .aboutBakheng {
-        padding: 20px 30px;
+    #bakheng {
+        margin-top: -100px;
+        .aboutBakheng {
+            padding: 20px 30px;
+        }
     }
     footer {
         padding: 20px 30px;
@@ -1120,6 +1113,16 @@ footer {
         .label, #copyright , #a, #b, #c, #d {
             margin-top: 5px;
         }
+    }
+    .angkor-info, .taProhm-info, .baphoun-info, .baKheng-info {
+        .itadori-Yuji {
+            flex-direction: column-reverse;
+
+            .image {
+                height: 60%;
+            }
+        }
+        
     }
 }
 @media (max-width: 440px) {
@@ -1219,6 +1222,23 @@ footer {
         h2 {
             font-size: 15px;
         }
+    }
+    .angkor-info, .taProhm-info, .baphoun-info, .baKheng-info {
+        padding: 20% 10px;
+        .itadori-Yuji {
+            flex-direction: column-reverse;
+
+            .image {
+                height: 70%;
+            }
+        }
+        label {
+            i {
+                padding: 10px;
+                font-size: 0.8rem;
+            }
+        }
+        
     }
     footer {
         padding: 10px;

@@ -743,6 +743,7 @@ footer {
         .grid-img {
             grid-template-columns: repeat(2,1fr);
             grid-template-rows: 300px 300px 300px 300px;
+
             .image1, .image2, .image3, .image4, .image5, .image6 {
                 background-size: cover;
                 background-position: center;
@@ -816,11 +817,11 @@ footer {
         }
         .Hotel, .recommendPlace {
             width: 100%;
-            padding:10px;
+            /* padding:10px; */
 
             img {
-                width: 54vh;
-                height: 350px;
+                width: 47vh;
+                height: 280px;
             }
         }
         .placeTovisit {
