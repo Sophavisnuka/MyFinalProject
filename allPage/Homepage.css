@@ -423,6 +423,24 @@ header ul li:hover .dropDown {
             background-image: url("../Image/mount3.jpg");
         }
     }
+    a {
+        padding: 20px 150px;
+        list-style: none;
+        text-decoration: none;
+        text-align: center;
+        align-self: center;
+        button  {
+            margin-top: 20px;
+            border-style: none;
+            color: rgb(255, 255, 255);
+            background-color:#006aff;
+            padding: 20px;
+            transition: 0.3s;
+        }
+        button:hover {
+            transform: scale(1.1);
+        }
+    }
 }
 footer {
     margin-top: 100px;
@@ -591,6 +609,10 @@ footer {
             padding: 20px 50px;
             .bg {
                 height: 7vw;
+                
+                label {
+                    color: white;
+                }
             }
             #midText {
                 font-size: 4vw;

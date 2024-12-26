@@ -491,6 +491,38 @@ header ul li:hover .dropDown {
             justify-content: center;
             align-items: center; 
         } 
+        .waterfall {
+
+            .first-section {
+                .image {
+                    div {
+                        flex-direction: column;
+                        img {
+    
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        footer {
+            padding: 10px;
+            #exploreFooter {
+                font-size: 14px;
+                width: 45vh;
+            }
+            .footerCopyright {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .copyright, .ourSocial,.customerService {
+                h2, #copyright, .socialMedia, .label{
+                    font-size: 14px;
+                }
+            }
+        }
     }
     .angkor-info, .taProhm-info, .baphoun-info, .baKheng-info {
         position: fixed;
@@ -628,9 +660,13 @@ header ul li:hover .dropDown {
         .first-section p {
           font-size: 16px;
         }
-      
+      .waterfall {
+        display: flex;
+        flex-direction: column;
+      }
         .first-section .image div {
-          width: 100%; /* Stack images vertically */
+            flex-direction: row;
+          width: 100vh; /* Stack images vertically */
           height: 30vh;
         }
       }

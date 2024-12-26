@@ -151,6 +151,33 @@ header ul li:hover .dropDown {
         #head p:nth-child(2) {
             font-size: 120px;
         }
+        footer {
+            padding: 20px 30px;
+            .footerText {
+                gap: 5px;
+            }
+            
+            .footerCopyright {
+                font-size: 14px;
+                gap: 20px;
+                display: flex;
+                align-items: center;
+            }
+            .copyright,.customerService {
+                font-size: 14px;
+            }
+            .ourSocial {
+                text-align: start;
+                
+                .socialMedia {
+                    gap: 10px;
+                    width: 100px;
+                }
+            }
+            .label, #copyright , #a, #b, #c, #d {
+                margin-top: 5px;
+            }
+        }
     }
     
     @media (max-width: 992px) {
@@ -186,6 +213,24 @@ header ul li:hover .dropDown {
         #head p:nth-child(2) {
             font-size: 60px;
         }
+        footer {
+            padding: 10px;
+            #exploreFooter {
+                font-size: 14px;
+                width: 45vh;
+            }
+            .footerCopyright {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .copyright, .ourSocial,.customerService {
+                h2, #copyright, .socialMedia, .label{
+                    font-size: 14px;
+                }
+            }
+        }
     }
 
     .first-section{
@@ -208,7 +253,11 @@ header ul li:hover .dropDown {
             grid-template-columns: repeat(1,1fr);
             gap: 10px; */
             /* grid-template-rows: 1; */
+            
             transition: 0.3s;
+            img {
+                width: 45vh;
+            }
             }
         }        
     }
